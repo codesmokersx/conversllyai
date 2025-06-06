@@ -44,10 +44,10 @@ export const PainPoints = () => {
                     <X className="w-5 h-5 text-red-400" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-100 text-lg mb-2">
+                    <h3 className="font-semibold text-bright-yellow text-lg mb-2">
                       {point.title}
                     </h3>
-                    <p className="text-gray-300">
+                    <p className="text-bright-yellow">
                       {point.description}
                     </p>
                   </div>
