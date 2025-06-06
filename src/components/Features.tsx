@@ -35,7 +35,7 @@ export const Features = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4">
             What ConversllyAI Does
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -45,14 +45,15 @@ export const Features = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow duration-300">
+            <Card key={index} className="border-navy/10 hover:shadow-xl hover:shadow-navy/5 transition-all duration-300 overflow-hidden group">
+              <div className="absolute h-1 bg-bright-yellow w-0 group-hover:w-full transition-all duration-500 top-0 left-0"></div>
               <CardHeader className="pb-4">
                 <div className="text-4xl mb-3">{feature.icon}</div>
                 <div className="space-y-2">
-                  <Badge variant="secondary" className="bg-blue-50 text-blue-700">
+                  <Badge variant="secondary" className="bg-navy/5 text-navy">
                     {feature.badge}
                   </Badge>
-                  <CardTitle className="text-lg">{feature.title}</CardTitle>
+                  <CardTitle className="text-lg text-navy">{feature.title}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent>

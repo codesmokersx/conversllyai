@@ -35,10 +35,10 @@ export const TeamSection = () => {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 bg-blue-50 text-blue-700 border-blue-200">
+          <Badge variant="outline" className="mb-4 bg-bright-yellow/10 text-navy border-bright-yellow/30">
             Meet the Team
           </Badge>
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-navy mb-4">
             Built by Sales & AI Experts
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -49,15 +49,15 @@ export const TeamSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {founders.map((founder, index) => (
-            <Card key={index} className="border-gray-200 hover:shadow-lg transition-shadow duration-300">
+            <Card key={index} className="border-gray-200 hover:shadow-lg transition-all duration-300">
               <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-2xl font-bold text-blue-600 mx-auto mb-4">
+                <div className="w-20 h-20 bg-navy rounded-full flex items-center justify-center text-2xl font-bold text-bright-yellow mx-auto mb-6 ring-4 ring-bright-yellow/20">
                   {founder.avatar}
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                <h3 className="text-xl font-semibold text-navy mb-1">
                   {founder.name}
                 </h3>
-                <Badge variant="outline" className="mb-3">
+                <Badge variant="outline" className="mb-4 border-navy/20 bg-navy/5 text-navy">
                   {founder.role}
                 </Badge>
                 <p className="text-gray-600 text-sm leading-relaxed">

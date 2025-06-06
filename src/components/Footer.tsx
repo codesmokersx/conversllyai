@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import { toast } from '@/hooks/use-toast';
+import { ArrowRight } from 'lucide-react';
 
 export const Footer = () => {
   const [email, setEmail] = useState('');
@@ -25,14 +26,22 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-navy text-white">
       {/* Final CTA Section */}
-      <div className="bg-blue-600 py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Join the First 100 Users
+      <div className="bg-gradient-to-r from-navy to-navy/90 py-16 relative overflow-hidden">
+        {/* Background effects */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: 'radial-gradient(circle at 25px 25px, rgba(255, 255, 255, 0.2) 2px, transparent 0)',
+            backgroundSize: '50px 50px'
+          }} />
+        </div>
+        
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
+          <h2 className="text-3xl lg:text-5xl font-bold text-white mb-4">
+            Join the First <span className="text-bright-yellow">100</span> Users
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
             We're onboarding our first 100 users who will shape the future of AI-powered sales.
             Be one of them.
           </p>
@@ -43,20 +52,24 @@ export const Footer = () => {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 bg-white text-gray-900"
+              className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-gray-400"
               disabled={isLoading}
             />
             <Button 
               type="submit" 
-              variant="secondary"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8"
+              className="bg-bright-yellow text-navy hover:bg-yellow-300 px-8 group"
               disabled={isLoading}
             >
-              {isLoading ? 'Joining...' : 'Join Waitlist'}
+              {isLoading ? 'Joining...' : (
+                <span className="flex items-center gap-2 font-medium">
+                  Join Waitlist
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </span>
+              )}
             </Button>
           </form>
           
-          <p className="text-sm text-blue-100 mt-4">
+          <p className="text-sm text-gray-400 mt-4">
             No spam. We'll only reach out when we're ready.
           </p>
         </div>
@@ -67,15 +80,18 @@ export const Footer = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-2">ConversllyAI</h3>
-              <p className="text-gray-400">Let AI take the first call</p>
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-bright-yellow rounded-full flex items-center justify-center text-navy font-bold text-sm">C</div>
+                <h3 className="text-2xl font-bold text-white">ConversllyAI</h3>
+              </div>
+              <p className="text-gray-400 mt-2">Let AI take the first call</p>
             </div>
             
             <div className="flex gap-8 text-sm">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Product</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Team</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+              <a href="#" className="text-gray-400 hover:text-bright-yellow transition-colors">Product</a>
+              <a href="#" className="text-gray-400 hover:text-bright-yellow transition-colors">Team</a>
+              <a href="#" className="text-gray-400 hover:text-bright-yellow transition-colors">Contact</a>
+              <a href="#" className="text-gray-400 hover:text-bright-yellow transition-colors">LinkedIn</a>
             </div>
           </div>
           
