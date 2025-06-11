@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import { Brain, Target, RotateCcw, BarChart3 } from 'lucide-react';
 
 const features = [
@@ -29,33 +28,33 @@ const features = [
 
 export const Solution = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <Badge variant="outline" className="mb-4 bg-bright-yellow/10 text-navy border-bright-yellow/30">
-            The ConversllyAI Solution
-          </Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold text-navy mb-6">
+    <section className="py-24 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="text-center mb-16 space-y-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-50 border border-blue-100">
+            <span className="text-blue-700 text-sm font-medium">The ConversllyAI Solution</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-normal text-gray-900 leading-tight">
             A full-stack AI SDR that makes cold calls
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light">
             ConversllyAI handles live conversations, refines scripts in real time, and integrates with your stack.
           </p>
         </div>
 
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-navy mb-8 text-center">How It Works:</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <h3 className="text-2xl font-normal text-gray-900 mb-12 text-center">How It Works:</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="border-gray-200 hover:shadow-lg transition-all duration-300 group">
-                <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-bright-yellow/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-bright-yellow/20 transition-colors">
-                    <feature.icon className="w-8 h-8 text-navy" />
+              <Card key={index} className="border-0 shadow-sm hover:shadow-md transition-all duration-200 bg-white">
+                <CardContent className="p-8 text-center">
+                  <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                    <feature.icon className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h4 className="text-lg font-semibold text-navy mb-3">
+                  <h4 className="text-lg font-medium text-gray-900 mb-4">
                     {feature.title}
                   </h4>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 leading-relaxed font-light">
                     {feature.description}
                   </p>
                 </CardContent>
