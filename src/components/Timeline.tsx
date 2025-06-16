@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, Circle, Clock } from 'lucide-react';
@@ -8,35 +9,35 @@ const timelineItems = [
     title: "Core AI Development",
     description: "Building the foundational AI conversation engine",
     status: "upcoming",
-    date: "Q3 2025"
+    date: "Q2 2025"
   },
   {
     phase: "Phase 2", 
     title: "Voice Integration",
     description: "Integrating advanced voice synthesis and recognition",
     status: "upcoming",
-    date: "Q4 2025"
+    date: "Q3 2025"
   },
   {
     phase: "Phase 3",
     title: "CRM Integrations",
     description: "Seamless integration with popular CRM platforms",
     status: "upcoming",
-    date: "Q3 2025 - Q2 2026"
+    date: "Q4 2025 - Q1 2026"
   },
   {
     phase: "Phase 4",
     title: "Beta Launch",
     description: "Limited beta release to early access users",
     status: "upcoming",
-    date: "Q2 2025"
+    date: "Q1 2026"
   },
   {
     phase: "Phase 5",
     title: "Public Launch",
     description: "Full product launch with all features",
     status: "upcoming",
-    date: "Q4 2025"
+    date: "Q2 2026"
   }
 ];
 
