@@ -22,8 +22,8 @@ const timelineItems = [
     phase: "Phase 3",
     title: "CRM Integrations",
     description: "Seamless integration with popular CRM platforms",
-    status: "in-progress",
-    date: "Q3 2024"
+    status: "upcoming",
+    date: "Q3 2025 - Q2 2026"
   },
   {
     phase: "Phase 4",
