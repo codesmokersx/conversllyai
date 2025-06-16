@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, Circle, Clock } from 'lucide-react';
@@ -8,15 +7,15 @@ const timelineItems = [
     phase: "Phase 1",
     title: "Core AI Development",
     description: "Building the foundational AI conversation engine",
-    status: "completed",
-    date: "Q1 2024"
+    status: "upcoming",
+    date: "Q3 2025"
   },
   {
     phase: "Phase 2", 
     title: "Voice Integration",
     description: "Integrating advanced voice synthesis and recognition",
-    status: "completed",
-    date: "Q2 2024"
+    status: "upcoming",
+    date: "Q4 2025"
   },
   {
     phase: "Phase 3",
