@@ -129,7 +129,7 @@ export const Hero = () => {
         <div className="animate-fade-in" style={{ animationDelay: '0.8s' }}>
           <div className="text-center">
             <p className="text-gray-600 mb-2">Expected Launch</p>
-            <p className="text-2xl font-medium text-gray-900">Q2 2024</p>
+            <p className="text-2xl font-medium text-gray-900">Q4 2025</p>
           </div>
         </div>
       </div>

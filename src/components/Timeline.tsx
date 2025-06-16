@@ -9,35 +9,35 @@ const timelineItems = [
     title: "Core AI Development",
     description: "Building the foundational AI conversation engine",
     status: "completed",
-    date: "Q4 2023"
+    date: "Q1 2024"
   },
   {
     phase: "Phase 2", 
     title: "Voice Integration",
     description: "Integrating advanced voice synthesis and recognition",
-    status: "in-progress",
-    date: "Q1 2024"
+    status: "completed",
+    date: "Q2 2024"
   },
   {
     phase: "Phase 3",
     title: "CRM Integrations",
     description: "Seamless integration with popular CRM platforms",
-    status: "upcoming",
-    date: "Q2 2024"
+    status: "in-progress",
+    date: "Q3 2024"
   },
   {
     phase: "Phase 4",
     title: "Beta Launch",
     description: "Limited beta release to early access users",
     status: "upcoming",
-    date: "Q2 2024"
+    date: "Q2 2025"
   },
   {
     phase: "Phase 5",
     title: "Public Launch",
     description: "Full product launch with all features",
     status: "upcoming",
-    date: "Q3 2024"
+    date: "Q4 2025"
   }
 ];
 

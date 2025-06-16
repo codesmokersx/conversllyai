@@ -106,7 +106,7 @@ export const ComingSoonFooter = () => {
           <Separator className="my-8 bg-gray-200" />
           
           <div className="text-center text-gray-500 text-sm font-light">
-            Copyright © 2024 ConversllyAI. All rights reserved. • Coming Soon
+            Copyright © 2025 ConversllyAI. All rights reserved. • Coming Soon
           </div>
         </div>
       </div>
