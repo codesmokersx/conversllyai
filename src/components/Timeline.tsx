@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Circle, Clock } from 'lucide-react';
+import { Circle } from 'lucide-react';
 
 const timelineItems = [
   {
@@ -44,39 +44,39 @@ const timelineItems = [
 
 export const Timeline = () => {
   return (
-    <section className="py-32 bg-gradient-to-b from-black via-gray-900 to-black">
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="text-center mb-20 space-y-8">
-          <h2 className="text-5xl md:text-6xl font-bold text-white leading-tight">
+    <section className="py-20 bg-black">
+      <div className="max-w-4xl mx-auto px-4">
+        <div className="text-center mb-16 space-y-4">
+          <h2 className="text-4xl md:text-5xl font-light text-white leading-tight">
             Development Roadmap
           </h2>
-          <p className="text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed font-light">
             Our journey to building the world's first autonomous GTM engine
           </p>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           {timelineItems.map((item, index) => (
-            <Card key={index} className="border-0 shadow-2xl hover:shadow-2xl transition-all duration-300 bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl hover:-translate-y-1 border-l-4 border-l-gray-600 hover:border-l-cyan-500 rounded-2xl overflow-hidden border border-gray-700/50">
-              <CardContent className="p-8">
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0 mt-2">
-                    <div className="w-12 h-12 bg-gradient-to-r from-gray-700/50 to-gray-800/50 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-gray-600/30">
-                      <Circle className="w-6 h-6 text-cyan-400" />
+            <Card key={index} className="border-0 bg-gray-900/30 backdrop-blur-xl transition-all duration-300 rounded-2xl border border-gray-800 hover:border-gray-700 hover:bg-gray-900/40">
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 mt-1">
+                    <div className="w-8 h-8 bg-gray-800/50 rounded-lg flex items-center justify-center border border-gray-700">
+                      <Circle className="w-4 h-4 text-gray-400" />
                     </div>
                   </div>
                   <div className="flex-grow">
-                    <div className="flex items-center gap-4 mb-4">
-                      <Badge variant="outline" className="text-sm font-semibold px-4 py-2 border-cyan-500/30 bg-cyan-500/10 text-cyan-300 backdrop-blur-sm">
+                    <div className="flex items-center gap-3 mb-3">
+                      <Badge variant="outline" className="text-xs font-normal px-3 py-1 border-gray-700 bg-gray-800/30 text-gray-300">
                         {item.phase}
                       </Badge>
-                      <span className="text-lg text-gray-500">•</span>
-                      <span className="text-lg text-gray-400 font-medium">{item.date}</span>
+                      <span className="text-sm text-gray-500">•</span>
+                      <span className="text-sm text-gray-400 font-light">{item.date}</span>
                     </div>
-                    <h4 className="text-2xl font-bold text-white mb-4">
+                    <h4 className="text-lg font-normal text-white mb-2">
                       {item.title}
                     </h4>
-                    <p className="text-gray-400 leading-relaxed text-lg">
+                    <p className="text-gray-400 leading-relaxed text-sm font-light">
                       {item.description}
                     </p>
                   </div>
@@ -86,12 +86,12 @@ export const Timeline = () => {
           ))}
         </div>
 
-        <div className="mt-20 text-center">
-          <div className="bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 backdrop-blur-xl rounded-3xl p-12 max-w-3xl mx-auto border border-cyan-500/20 shadow-2xl shadow-cyan-500/10">
-            <h3 className="text-3xl font-bold text-white mb-6">
+        <div className="mt-16 text-center">
+          <div className="bg-gradient-to-r from-blue-500/10 via-cyan-500/10 to-purple-500/10 backdrop-blur-xl rounded-2xl p-8 max-w-2xl mx-auto border border-gray-800">
+            <h3 className="text-2xl font-light text-white mb-4">
               Launch Target: Q1 2026
             </h3>
-            <p className="text-xl text-gray-300 leading-relaxed">
+            <p className="text-base text-gray-400 leading-relaxed font-light">
               The complete autonomous GTM engine, ready to transform how businesses approach outbound sales and marketing.
             </p>
           </div>
