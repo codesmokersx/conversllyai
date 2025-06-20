@@ -2,9 +2,8 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Badge } from '@/components/ui/badge';
 import { toast } from '@/hooks/use-toast';
-import { ArrowRight, Sparkles, Zap } from 'lucide-react';
+import { ArrowRight, Bell } from 'lucide-react';
 
 export const Hero = () => {
   const [email, setEmail] = useState('');
@@ -15,7 +14,7 @@ export const Hero = () => {
     if (!email) {
       toast({
         title: "Email required",
-        description: "Please enter your email to join the waitlist",
+        description: "Enter your email to join the future",
         variant: "destructive",
       });
       return;
@@ -25,8 +24,8 @@ export const Hero = () => {
     setTimeout(() => {
       setIsLoading(false);
       toast({
-        title: "You're on the list! 🚀",
-        description: "We'll notify you as soon as ConversllyAI is ready.",
+        title: "Welcome to the future",
+        description: "You'll be first to experience what's next.",
       });
       setEmail('');
     }, 1000);
@@ -34,118 +33,84 @@ export const Hero = () => {
 
   return (
     <section className="min-h-screen bg-black flex items-center justify-center px-4 py-16 relative overflow-hidden">
-      {/* Subtle background elements */}
+      {/* Subtle space background effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/3 left-1/3 w-64 h-64 bg-gradient-to-r from-blue-600/5 to-cyan-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-64 h-64 bg-gradient-to-r from-purple-600/5 to-pink-600/5 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/20 rounded-full animate-pulse"></div>
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-300/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-white/15 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-cyan-300/25 rounded-full animate-pulse" style={{ animationDelay: '3s' }}></div>
+        
+        {/* Subtle horizon glow */}
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-950/10 to-transparent"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
-        {/* Coming Soon Badge */}
-        <div className="animate-fade-in">
-          <Badge className="inline-flex items-center px-4 py-2 rounded-full bg-gray-900/50 text-gray-300 text-sm font-normal border border-gray-800 backdrop-blur-sm">
-            <Zap className="w-4 h-4 mr-2 text-blue-400" />
-            Launching Q1 2026
-          </Badge>
-        </div>
+      <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
         
         {/* Main Headline */}
-        <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight tracking-tight">
-            The Autonomous{' '}
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent font-medium">
-              GTM Engine
+        <div className="space-y-8">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-tight tracking-tight">
+            The Future of Outbound
+            <br />
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
+              Is Already Thinking
             </span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto font-light leading-relaxed">
-            From prompt to pipeline. Build and run your entire outbound motion across voice, email, LinkedIn, and CRM from a single prompt.
-          </h2>
-          
-          <p className="text-base text-gray-500 max-w-2xl mx-auto leading-relaxed font-light">
-            ConversllyAI orchestrates your complete go-to-market strategy autonomously, handling everything from lead generation to deal closure.
-          </p>
+          <div className="space-y-6 max-w-2xl mx-auto">
+            <h2 className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
+              A new kind of go-to-market system.
+            </h2>
+            <p className="text-lg text-gray-400 font-light">
+              Autonomous. Invisible. In motion.
+            </p>
+          </div>
         </div>
 
-        {/* Waitlist Form */}
-        <div className="animate-fade-in pt-4" style={{ animationDelay: '0.2s' }}>
-          <div className="bg-gray-900/30 backdrop-blur-xl rounded-2xl border border-gray-800 p-8 max-w-md mx-auto">
-            <div className="flex items-center justify-center mb-6">
-              <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
-              <h3 className="text-lg font-normal text-white">Get Early Access</h3>
-            </div>
-            
-            <form onSubmit={handleSubmit} className="space-y-4">
+        {/* CTA Section */}
+        <div className="space-y-8 pt-8">
+          <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Input
                 type="email"
-                placeholder="Enter your email address"
+                placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-gray-800/50 border-gray-700 text-white placeholder-gray-500 rounded-xl py-3 px-4 text-center focus:border-blue-500 focus:ring-1 focus:ring-blue-500/20 transition-all"
+                className="flex-1 bg-gray-950/50 border-gray-800 text-white placeholder-gray-500 rounded-lg py-3 px-4 text-center focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all backdrop-blur-sm"
                 disabled={isLoading}
               />
               <Button 
                 type="submit" 
                 size="lg"
-                className="w-full bg-white text-black hover:bg-gray-100 py-3 rounded-xl font-normal transition-all"
+                className="bg-white text-black hover:bg-gray-100 py-3 px-6 rounded-lg font-light transition-all"
                 disabled={isLoading}
               >
                 {isLoading ? 'Joining...' : (
                   <span className="flex items-center justify-center gap-2">
-                    Join the Waitlist
+                    Join Waitlist
                     <ArrowRight className="w-4 h-4" />
                   </span>
                 )}
               </Button>
-            </form>
-            
-            <p className="text-xs text-gray-500 mt-4 font-light">
-              Be among the first to experience autonomous GTM
-            </p>
-          </div>
-        </div>
-
-        {/* Key Features Preview */}
-        <div className="animate-fade-in pt-8" style={{ animationDelay: '0.3s' }}>
-          <div className="max-w-3xl mx-auto">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-              <div className="space-y-3 group">
-                <div className="w-12 h-12 bg-gray-900/50 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto border border-gray-800 group-hover:border-blue-500/30 transition-all">
-                  <span className="text-xl">🎯</span>
-                </div>
-                <p className="text-sm font-normal text-white">Voice Outreach</p>
-                <p className="text-xs text-gray-500 font-light">AI-powered calls</p>
-              </div>
-              <div className="space-y-3 group">
-                <div className="w-12 h-12 bg-gray-900/50 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto border border-gray-800 group-hover:border-emerald-500/30 transition-all">
-                  <span className="text-xl">✉️</span>
-                </div>
-                <p className="text-sm font-normal text-white">Email Sequences</p>
-                <p className="text-xs text-gray-500 font-light">Personalized at scale</p>
-              </div>
-              <div className="space-y-3 group">
-                <div className="w-12 h-12 bg-gray-900/50 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto border border-gray-800 group-hover:border-purple-500/30 transition-all">
-                  <span className="text-xl">💼</span>
-                </div>
-                <p className="text-sm font-normal text-white">LinkedIn Automation</p>
-                <p className="text-xs text-gray-500 font-light">Social selling</p>
-              </div>
-              <div className="space-y-3 group">
-                <div className="w-12 h-12 bg-gray-900/50 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto border border-gray-800 group-hover:border-orange-500/30 transition-all">
-                  <span className="text-xl">📊</span>
-                </div>
-                <p className="text-sm font-normal text-white">CRM Integration</p>
-                <p className="text-xs text-gray-500 font-light">Unified pipeline</p>
-              </div>
             </div>
+          </form>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button 
+              variant="outline"
+              size="lg"
+              className="border-gray-700 bg-transparent text-gray-300 hover:bg-gray-900/50 py-3 px-6 rounded-lg font-light transition-all"
+            >
+              <Bell className="w-4 h-4 mr-2" />
+              Get Notified
+            </Button>
           </div>
         </div>
 
-        {/* Stats */}
-        <div className="animate-fade-in pt-6" style={{ animationDelay: '0.4s' }}>
-          <div className="text-center space-y-2">
-            <p className="text-base text-gray-400 font-light">One prompt. Complete GTM automation.</p>
-            <p className="text-lg text-white font-normal">Expected Launch: Q1 2026</p>
+        {/* Subtle status indicator */}
+        <div className="pt-12">
+          <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+            <div className="w-2 h-2 bg-green-400/60 rounded-full animate-pulse"></div>
+            System in development
           </div>
         </div>
       </div>

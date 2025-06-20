@@ -1,17 +1,19 @@
 
 import React from 'react';
 import { Hero } from '@/components/Hero';
-import { ComingSoonFeatures } from '@/components/ComingSoonFeatures';
-import { Timeline } from '@/components/Timeline';
-import { ComingSoonFooter } from '@/components/ComingSoonFooter';
+import { MidSection } from '@/components/MidSection';
+import { CredibilitySection } from '@/components/CredibilitySection';
+import { FinalCTA } from '@/components/FinalCTA';
+import { MinimalFooter } from '@/components/MinimalFooter';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-black">
       <Hero />
-      <ComingSoonFeatures />
-      <Timeline />
-      <ComingSoonFooter />
+      <MidSection />
+      <CredibilitySection />
+      <FinalCTA />
+      <MinimalFooter />
     </div>
   );
 };
