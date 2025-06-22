@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Mail, Twitter } from 'lucide-react';
+import { ConversllyLogo } from './ConversllyLogo';
 
 export const CleanFooter = () => {
   return (
@@ -8,11 +9,16 @@ export const CleanFooter = () => {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center space-y-8">
           
+          {/* Logo */}
+          <div className="flex justify-center">
+            <ConversllyLogo size="sm" />
+          </div>
+          
           {/* Contact */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-gray-600">
             <a 
               href="mailto:akash@converslly.com" 
-              className="flex items-center gap-2 hover:text-blue-600 transition-colors font-normal"
+              className="flex items-center gap-2 hover:text-purple-600 transition-colors font-normal"
             >
               <Mail className="w-4 h-4" />
               akash@converslly.com
@@ -21,7 +27,7 @@ export const CleanFooter = () => {
               href="https://twitter.com/conversllyai" 
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 hover:text-blue-600 transition-colors font-normal"
+              className="flex items-center gap-2 hover:text-purple-600 transition-colors font-normal"
             >
               <Twitter className="w-4 h-4" />
               @conversllyai

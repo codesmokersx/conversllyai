@@ -11,14 +11,14 @@ export const HowItWorksSimple = () => {
         
         <div className="max-w-3xl mx-auto space-y-6">
           <p className="text-xl text-gray-600 font-normal leading-relaxed">
-            ConversllyAI builds the strategy, handles the outreach, follows up, books the meeting, and updates your CRM — all by itself.
+            ConversllyAI builds the strategy, handles the outreach, follows up, books the meeting, and updates your CRM all by itself.
           </p>
           
           <div className="space-y-4 pt-6">
             <p className="text-lg text-gray-700">
               You don't need to configure it.
             </p>
-            <p className="text-lg text-blue-600 font-medium">
+            <p className="text-lg text-purple-600 font-medium">
               You just need to start it.
             </p>
           </div>

@@ -7,7 +7,7 @@ const capabilities = [
   {
     icon: Brain,
     title: "Understands Who to Target",
-    description: "Just tell it your ICP — Converslly builds the entire approach"
+    description: "Just tell it your ICP and Converslly builds the entire approach"
   },
   {
     icon: Phone,
@@ -17,7 +17,7 @@ const capabilities = [
   {
     icon: Mail,
     title: "Sends Contextual Follow-Ups",
-    description: "Across email and LinkedIn — matched to voice tone and objection"
+    description: "Across email and LinkedIn, matched to voice tone and objection"
   },
   {
     icon: RefreshCw,
@@ -27,7 +27,7 @@ const capabilities = [
   {
     icon: Link,
     title: "Syncs to Your Stack",
-    description: "CRM, Calendars, Workflows — already integrated"
+    description: "CRM, Calendars, Workflows already integrated"
   },
   {
     icon: TrendingUp,
@@ -54,8 +54,8 @@ export const CapabilitiesGrid = () => {
             <Card key={index} className="border border-gray-200 hover:border-gray-300 transition-colors">
               <CardContent className="p-6">
                 <div className="space-y-4">
-                  <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center">
-                    <capability.icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center">
+                    <capability.icon className="w-6 h-6 text-purple-600" />
                   </div>
                   <h3 className="text-lg font-medium text-gray-900">
                     {capability.title}

@@ -25,13 +25,13 @@ export const WaitlistSection = () => {
   };
 
   return (
-    <section className="py-20 bg-blue-600">
+    <section className="py-20 bg-purple-600">
       <div className="max-w-3xl mx-auto px-6 text-center space-y-10">
         <div className="space-y-4">
           <h2 className="text-3xl md:text-4xl font-normal text-white">
             We're letting in the first 100 companies.
           </h2>
-          <p className="text-xl text-blue-100 font-normal">
+          <p className="text-xl text-purple-100 font-normal">
             Join early access. Let Converslly run your outbound for you.
           </p>
         </div>
@@ -49,7 +49,7 @@ export const WaitlistSection = () => {
             <Button 
               type="submit" 
               size="lg"
-              className="h-12 bg-white text-blue-600 hover:bg-gray-50 px-6 rounded-lg font-medium transition-colors"
+              className="h-12 bg-white text-purple-600 hover:bg-gray-50 px-6 rounded-lg font-medium transition-colors"
               disabled={isLoading}
             >
               {isLoading ? 'Joining...' : (
@@ -66,7 +66,7 @@ export const WaitlistSection = () => {
           <Button 
             variant="outline"
             size="lg"
-            className="h-12 border-blue-400 bg-transparent text-blue-100 hover:bg-blue-500/20 px-6 rounded-lg font-medium transition-colors"
+            className="h-12 border-purple-400 bg-transparent text-purple-100 hover:bg-purple-500/20 px-6 rounded-lg font-medium transition-colors"
           >
             <Twitter className="w-4 h-4 mr-2" />
             Follow the Launch

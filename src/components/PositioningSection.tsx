@@ -9,7 +9,7 @@ export const PositioningSection = () => {
           Converslly isn't a tool. It's a system that thinks, speaks, and closes.
         </h2>
         <p className="text-xl text-gray-600 font-normal mt-6 leading-relaxed max-w-2xl mx-auto">
-          From one input, it generates and runs your outbound — across channels, across time zones, without you.
+          From one input, it generates and runs your outbound across channels, across time zones, without you.
         </p>
       </div>
     </section>
