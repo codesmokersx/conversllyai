@@ -1,19 +1,23 @@
 
 import React from 'react';
 import { Hero } from '@/components/Hero';
-import { MidSection } from '@/components/MidSection';
-import { CredibilitySection } from '@/components/CredibilitySection';
-import { FinalCTA } from '@/components/FinalCTA';
-import { MinimalFooter } from '@/components/MinimalFooter';
+import { PositioningSection } from '@/components/PositioningSection';
+import { CapabilitiesGrid } from '@/components/CapabilitiesGrid';
+import { HowItWorksSimple } from '@/components/HowItWorksSimple';
+import { WhoItsFor } from '@/components/WhoItsFor';
+import { WaitlistSection } from '@/components/WaitlistSection';
+import { CleanFooter } from '@/components/CleanFooter';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-white">
       <Hero />
-      <MidSection />
-      <CredibilitySection />
-      <FinalCTA />
-      <MinimalFooter />
+      <PositioningSection />
+      <CapabilitiesGrid />
+      <HowItWorksSimple />
+      <WhoItsFor />
+      <WaitlistSection />
+      <CleanFooter />
     </div>
   );
 };

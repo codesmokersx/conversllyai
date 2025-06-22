@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
-import { ArrowRight, Bell } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 
 export const Hero = () => {
   const [email, setEmail] = useState('');
@@ -14,7 +14,7 @@ export const Hero = () => {
     if (!email) {
       toast({
         title: "Email required",
-        description: "Enter your email to join the future",
+        description: "Enter your email to join the waitlist",
         variant: "destructive",
       });
       return;
@@ -24,68 +24,57 @@ export const Hero = () => {
     setTimeout(() => {
       setIsLoading(false);
       toast({
-        title: "Welcome to the future",
-        description: "You'll be first to experience what's next.",
+        title: "Welcome to the future of outbound",
+        description: "You're on the waitlist. We'll be in touch soon.",
       });
       setEmail('');
     }, 1000);
   };
 
   return (
-    <section className="min-h-screen bg-black flex items-center justify-center px-4 py-16 relative overflow-hidden">
-      {/* Subtle space background effects */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-1 h-1 bg-white/20 rounded-full animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-blue-300/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-white/15 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-1/3 right-1/4 w-1 h-1 bg-cyan-300/25 rounded-full animate-pulse" style={{ animationDelay: '3s' }}></div>
-        
-        {/* Subtle horizon glow */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-950/10 to-transparent"></div>
-      </div>
-
-      <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
+    <section className="min-h-screen bg-white flex items-center justify-center px-6 py-20">
+      <div className="max-w-4xl mx-auto text-center space-y-10">
         
         {/* Main Headline */}
-        <div className="space-y-8">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-light text-white leading-tight tracking-tight">
-            The Future of Outbound
+        <div className="space-y-6">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-gray-900 leading-tight tracking-tight">
+            Outbound, Done for You.
             <br />
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-300 to-white bg-clip-text text-transparent">
-              Is Already Thinking
+            <span className="text-blue-600">
+              By AI.
             </span>
           </h1>
           
-          <div className="space-y-6 max-w-2xl mx-auto">
-            <h2 className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
-              A new kind of go-to-market system.
+          <div className="space-y-4 max-w-3xl mx-auto">
+            <h2 className="text-xl md:text-2xl text-gray-600 font-normal leading-relaxed">
+              ConversllyAI handles cold calls, emails, LinkedIn, and CRM — automatically.
             </h2>
-            <p className="text-lg text-gray-400 font-light">
-              Autonomous. Invisible. In motion.
+            <p className="text-lg text-gray-500 font-normal">
+              No reps. No playbooks. No effort.
             </p>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="space-y-8 pt-8">
+        <div className="space-y-6 pt-8">
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-3">
               <Input
                 type="email"
-                placeholder="Enter your email"
+                placeholder="Enter your work email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 bg-gray-950/50 border-gray-800 text-white placeholder-gray-500 rounded-lg py-3 px-4 text-center focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 transition-all backdrop-blur-sm"
+                className="flex-1 h-12 px-4 text-gray-900 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                 disabled={isLoading}
               />
               <Button 
                 type="submit" 
                 size="lg"
-                className="bg-white text-black hover:bg-gray-100 py-3 px-6 rounded-lg font-light transition-all"
+                className="h-12 bg-blue-600 hover:bg-blue-700 text-white px-6 rounded-lg font-medium transition-colors"
                 disabled={isLoading}
               >
                 {isLoading ? 'Joining...' : (
-                  <span className="flex items-center justify-center gap-2">
+                  <span className="flex items-center gap-2">
                     Join Waitlist
                     <ArrowRight className="w-4 h-4" />
                   </span>
@@ -98,20 +87,19 @@ export const Hero = () => {
             <Button 
               variant="outline"
               size="lg"
-              className="border-gray-700 bg-transparent text-gray-300 hover:bg-gray-900/50 py-3 px-6 rounded-lg font-light transition-all"
+              className="h-12 border-gray-300 text-gray-700 hover:bg-gray-50 px-6 rounded-lg font-medium transition-colors"
             >
-              <Bell className="w-4 h-4 mr-2" />
-              Get Notified
+              <Play className="w-4 h-4 mr-2" />
+              Watch It Work
             </Button>
           </div>
         </div>
 
-        {/* Subtle status indicator */}
+        {/* Trust indicator */}
         <div className="pt-12">
-          <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
-            <div className="w-2 h-2 bg-green-400/60 rounded-full animate-pulse"></div>
-            System in development
-          </div>
+          <p className="text-sm text-gray-400">
+            Trusted by 100+ companies in early access
+          </p>
         </div>
       </div>
     </section>
