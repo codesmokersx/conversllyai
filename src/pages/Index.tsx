@@ -10,7 +10,7 @@ import { CleanFooter } from '@/components/CleanFooter';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       <Hero />
       <PositioningSection />
       <CapabilitiesGrid />

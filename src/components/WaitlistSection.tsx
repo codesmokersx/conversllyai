@@ -25,14 +25,14 @@ export const WaitlistSection = () => {
   };
 
   return (
-    <section className="py-20 bg-purple-600">
+    <section className="py-24 bg-gradient-to-r from-blue-600 to-cyan-600">
       <div className="max-w-3xl mx-auto px-6 text-center space-y-10">
         <div className="space-y-4">
-          <h2 className="text-3xl md:text-4xl font-normal text-white">
-            We're letting in the first 100 companies.
+          <h2 className="text-3xl md:text-4xl font-light text-white">
+            Secure Your Spot. Early Access is Limited.
           </h2>
-          <p className="text-xl text-purple-100 font-normal">
-            Join early access. Let Converslly run your outbound for you.
+          <p className="text-xl text-blue-100 font-light">
+            We're inviting the first 100 companies. Join now and let ConversllyAI revolutionize your outbound.
           </p>
         </div>
         
@@ -43,18 +43,18 @@ export const WaitlistSection = () => {
               placeholder="Enter your work email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 h-12 px-4 bg-white text-gray-900 border-0 rounded-lg"
+              className="flex-1 h-12 px-4 bg-white text-gray-900 border-0 rounded-lg focus:ring-2 focus:ring-white/20"
               disabled={isLoading}
             />
             <Button 
               type="submit" 
               size="lg"
-              className="h-12 bg-white text-purple-600 hover:bg-gray-50 px-6 rounded-lg font-medium transition-colors"
+              className="h-12 bg-gray-900 text-white hover:bg-gray-800 px-6 rounded-lg font-medium transition-colors"
               disabled={isLoading}
             >
               {isLoading ? 'Joining...' : (
                 <span className="flex items-center gap-2">
-                  Join Waitlist
+                  Join Early Access
                   <ArrowRight className="w-4 h-4" />
                 </span>
               )}
@@ -66,10 +66,10 @@ export const WaitlistSection = () => {
           <Button 
             variant="outline"
             size="lg"
-            className="h-12 border-purple-400 bg-transparent text-purple-100 hover:bg-purple-500/20 px-6 rounded-lg font-medium transition-colors"
+            className="h-12 border-white/30 bg-transparent text-white hover:bg-white/10 px-6 rounded-lg font-medium transition-colors"
           >
             <Twitter className="w-4 h-4 mr-2" />
-            Follow the Launch
+            Follow Our Journey
           </Button>
         </div>
       </div>

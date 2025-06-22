@@ -15,7 +15,7 @@ export const Hero = () => {
     if (!email) {
       toast({
         title: "Email required",
-        description: "Enter your email to join the waitlist",
+        description: "Enter your email to join early access",
         variant: "destructive",
       });
       return;
@@ -26,45 +26,49 @@ export const Hero = () => {
       setIsLoading(false);
       toast({
         title: "Welcome to the future of outbound",
-        description: "You're on the waitlist. We'll be in touch soon.",
+        description: "You're on the early access list. We'll be in touch soon.",
       });
       setEmail('');
     }, 1000);
   };
 
   return (
-    <section className="min-h-screen bg-white flex flex-col">
+    <section className="min-h-screen bg-gray-900 flex flex-col">
       {/* Header with Logo */}
       <header className="px-6 py-6">
-        <ConversllyLogo size="md" />
+        <ConversllyLogo size="md" variant="white" />
       </header>
 
       {/* Main Hero Content */}
       <div className="flex-1 flex items-center justify-center px-6 py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-10">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
           
           {/* Main Headline */}
-          <div className="space-y-6">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-normal text-gray-900 leading-tight tracking-tight">
-              Outbound, Done for You.
+          <div className="space-y-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight tracking-tight">
+              Outbound Sales.
               <br />
-              <span className="text-purple-600">
+              <span className="text-gray-300">
+                Automated.
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
                 By AI.
               </span>
             </h1>
             
-            <div className="space-y-4 max-w-3xl mx-auto">
-              <h2 className="text-xl md:text-2xl text-gray-600 font-normal leading-relaxed">
-                ConversllyAI handles cold calls, emails, LinkedIn, and CRM automatically.
+            <div className="space-y-6 max-w-3xl mx-auto">
+              <h2 className="text-xl md:text-2xl text-gray-300 font-light leading-relaxed">
+                ConversllyAI orchestrates cold calls, emails, LinkedIn, and CRM without manual effort.
               </h2>
-              <p className="text-lg text-gray-500 font-normal">
-                No reps. No playbooks. No effort.
+              <p className="text-lg text-gray-400 font-light">
+                No reps. No playbooks. Pure performance.
               </p>
             </div>
           </div>
 
           {/* CTA Section */}
-          <div className="space-y-6 pt-8">
+          <div className="space-y-8 pt-8">
             <form onSubmit={handleSubmit} className="max-w-md mx-auto">
               <div className="flex flex-col sm:flex-row gap-3">
                 <Input
@@ -72,18 +76,18 @@ export const Hero = () => {
                   placeholder="Enter your work email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 h-12 px-4 text-gray-900 border-gray-300 rounded-lg focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20"
+                  className="flex-1 h-12 px-4 bg-gray-800 border-gray-700 text-white placeholder-gray-400 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
                   disabled={isLoading}
                 />
                 <Button 
                   type="submit" 
                   size="lg"
-                  className="h-12 bg-purple-600 hover:bg-purple-700 text-white px-6 rounded-lg font-medium transition-colors"
+                  className="h-12 bg-blue-600 hover:bg-blue-700 text-white px-6 rounded-lg font-medium transition-colors"
                   disabled={isLoading}
                 >
                   {isLoading ? 'Joining...' : (
                     <span className="flex items-center gap-2">
-                      Join Waitlist
+                      Join Early Access
                       <ArrowRight className="w-4 h-4" />
                     </span>
                   )}
@@ -95,18 +99,18 @@ export const Hero = () => {
               <Button 
                 variant="outline"
                 size="lg"
-                className="h-12 border-gray-300 text-gray-700 hover:bg-gray-50 px-6 rounded-lg font-medium transition-colors"
+                className="h-12 border-gray-600 bg-transparent text-gray-300 hover:bg-gray-800 px-6 rounded-lg font-medium transition-colors"
               >
                 <Play className="w-4 h-4 mr-2" />
-                Watch It Work
+                See It In Action
               </Button>
             </div>
           </div>
 
           {/* Trust indicator */}
           <div className="pt-12">
-            <p className="text-sm text-gray-400">
-              Trusted by 100+ companies in early access
+            <p className="text-sm text-gray-500">
+              Early access limited to first 100 companies
             </p>
           </div>
         </div>
